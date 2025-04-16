@@ -79,8 +79,9 @@
   overflow: hidden;
   border-right: 3px solid #ff8ba7;
   display: inline-block;
-  width: 24ch; /* FIXED WIDTH so it doesn't shift while typing */
+  width: 24ch; 
   animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
+transform: translateY(-200px);
 }
 
 @keyframes typing {
@@ -91,8 +92,6 @@
 @keyframes blink {
   50% { border-color: transparent; }
 }
-
-
 
     </style>
   </head>
