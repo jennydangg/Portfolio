@@ -265,19 +265,66 @@
 .linkedin-icon img:hover {
   transform: scale(1.1);
 }
+      /* Dropdown menu setup */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffd6e4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  color: #d46e91;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #fce8ef;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 
 
     </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#portfolio">work</a></li>
-        <li><a href="#contact">contact</a></li>
+  <nav>
+  <ul>
+    <li><a href="#home">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li class="dropdown">
+      <a href="#portfolio">work</a>
+      <ul class="dropdown-menu">
+        <li><a href="#branding">rebrands/strategy</a></li>
+        <li><a href="#poster">posters</a></li>
+        <li><a href="#strategy">other</a></li>
       </ul>
-    </nav>
+    </li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</nav>
      
     <section id="home">
       <h1 class="typing">welcome to my portfolio.</h1>
@@ -298,6 +345,7 @@
     <section id="portfolio">
       <div class="portfolio-wrapper">
         <h2>a glimpse of my work</h2>
+        
         <div class="work-grid">
           <div class="work-item">
             <img src="proj1.png" alt="Project 1">
