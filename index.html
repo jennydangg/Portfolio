@@ -61,6 +61,27 @@
       #home {
       padding-top: 150px;
       }
+      
+
+.typing {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ff8ba7;
+  width: 0;
+  animation: typing 3s steps(20) forwards, blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
     </style>
   </head>
   <body>
@@ -72,10 +93,9 @@
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
-    
- <section id="home">
-  <h1 style="text-align: center; font-size: 78px;">welcome</h1>
-  <p style="text-align: center; font-size: 40px;">to my portfolio.</p>
+     
+<section id="home" style="padding-top: 200px;">
+  <h1 class="typing" style="font-size: 48px; text-align: center; color: #d46e91;">welcome to my portfolio.</h1>
 </section>
 
   </body>
