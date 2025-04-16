@@ -134,8 +134,9 @@
         height: 200px;
         object-fit: cover;
         border-radius: 50%;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+        margin-top: -30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
       }
 
       #portfolio {
@@ -179,6 +180,48 @@
         font-size: 16px;
         color: #444;
       }
+      
+      #photography {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.photo-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+#photography h2 {
+  font-size: 36px;
+  color: #d46e91;
+  margin-bottom: 40px;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.photo-item {
+  width: 300px;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-item img:hover {
+  transform: scale(1.05);
+}
+
     </style>
   </head>
   <body>
@@ -226,6 +269,24 @@
         </div>
       </div>
     </section>
+    
+    <section id="photography">
+  <div class="photo-wrapper">
+    <h2>through my lens</h2>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="meeko.jpg" alt="Photography 1">
+      </div>
+      <div class="photo-item">
+        <img src="photo2.jpg" alt="Photography 2">
+      </div>
+      <div class="photo-item">
+        <img src="photo3.jpg" alt="Photography 3">
+      </div>
+    </div>
+  </div>
+</section>
+
 
   </body>
 </html>
