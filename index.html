@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everything Jenny Dang</title>
-    <style> 
+    <style>
       * {
         margin: 0;
         padding: 0;
@@ -21,7 +21,7 @@
         padding: 15px;
         position: sticky;
         top: 0;
-        z-index: 1000; 
+        z-index: 1000;
         background: #ffd6e4;
       }
 
@@ -47,7 +47,7 @@
 
       section {
         padding: 20px;
-        margin-top: 60px; 
+        margin-top: 60px;
       }
 
       footer {
@@ -73,18 +73,25 @@
         overflow: hidden;
         border-right: 3px solid #ff8ba7;
         display: inline-block;
-        width: 24ch; 
+        width: 24ch;
         animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
         transform: translateY(-100px);
       }
 
       @keyframes typing {
-        from { width: 0 }
-        to { width: 24ch }
+        from {
+          width: 0
+        }
+
+        to {
+          width: 24ch
+        }
       }
 
       @keyframes blink {
-        50% { border-color: transparent; }
+        50% {
+          border-color: transparent;
+        }
       }
 
       .scroll-down {
@@ -97,9 +104,12 @@
       }
 
       @keyframes bounce {
-        0%, 100% {
+
+        0%,
+        100% {
           transform: translateY(0);
         }
+
         50% {
           transform: translateY(10px);
         }
@@ -166,9 +176,9 @@
       .work-item {
         width: 450px;
       }
-      
+
       .work-item:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
       }
 
       .work-item img {
@@ -184,148 +194,148 @@
         font-size: 16px;
         color: #444;
       }
-      
-  #photography {
-  padding: 80px 20px;
-  text-align: center;
-}
 
-.photo-wrapper {
-  max-width: 1000px;
-  margin: auto;
-}
+      #photography {
+        padding: 80px 20px;
+        text-align: center;
+      }
 
-#photography h2 {
-  font-size: 36px;
-  color: #d46e91;
-  margin-bottom: 40px;
-  margin-top: -100px;
-}
-   #photography h3 {
-  font-size: 20px;
-  font-weight: normal;
-  color: #d46e91;
-  margin-top: -30px;
-  margin-bottom: 40px;
-}
+      .photo-wrapper {
+        max-width: 1000px;
+        margin: auto;
+      }
 
-.photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
+      #photography h2 {
+        font-size: 36px;
+        color: #d46e91;
+        margin-bottom: 40px;
+        margin-top: -100px;
+      }
 
-.photo-item {
-  width: 300px;
-}
+      #photography h3 {
+        font-size: 20px;
+        font-weight: normal;
+        color: #d46e91;
+        margin-top: -30px;
+        margin-bottom: 40px;
+      }
 
-.photo-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+      .photo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
 
-.photo-item img:hover {
-  transform: scale(1.05);
-}
-      
-#contact {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
- .contact-bar {
-  background-color: #f7c3d5;
-  color: white;
-  text-align: left;
-  padding: 5px 10px;
-  font-size: 15px;
-  width: 100%;   
-}
+      .photo-item {
+        width: 300px;
+      }
 
-.contact-bar a {
-  color: white;
-  text-decoration: underline;
-  font-weight: bold;
-  margin-left: 5px;
-}
+      .photo-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
 
-.linkedin-icon img {
-  width: 40px;
-  height: 40px;
-  vertical-align: middle; 
-  margin-left: 8px; 
-  transition: transform 0.3s ease;
-}
+      .photo-item img:hover {
+        transform: scale(1.05);
+      }
 
-.linkedin-icon img:hover {
-  transform: scale(1.1);
-}
+      #contact {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contact-bar {
+        background-color: #f7c3d5;
+        color: white;
+        text-align: left;
+        padding: 5px 10px;
+        font-size: 15px;
+        width: 100%;
+      }
+
+      .contact-bar a {
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+
+      .linkedin-icon img {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .linkedin-icon img:hover {
+        transform: scale(1.1);
+      }
+
       /* Dropdown menu setup */
-.dropdown {
-  position: relative;
-}
+      .dropdown {
+        position: relative;
+      }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #ffd6e4;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  list-style-type: none;
-  padding: 10px 0;
-  margin: 0;
-  border-radius: 8px;
-  top: 100%;
-  left: 0;
-  z-index: 999;
-  min-width: 150px;
-}
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #ffd6e4;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 8px;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+        min-width: 150px;
+      }
 
-.dropdown-menu li {
-  padding: 8px 20px;
-  text-align: left;
-}
+      .dropdown-menu li {
+        padding: 8px 20px;
+        text-align: left;
+      }
 
-.dropdown-menu li a {
-  color: #d46e91;
-  text-decoration: none;
-  display: block;
-}
+      .dropdown-menu li a {
+        color: #d46e91;
+        text-decoration: none;
+        display: block;
+      }
 
-.dropdown-menu li a:hover {
-  background-color: #fce8ef;
-}
+      .dropdown-menu li a:hover {
+        background-color: #fce8ef;
+      }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-
-
+      /* Show dropdown on hover */
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
     </style>
   </head>
   <body>
-  <nav>
-  <ul>
-    <li><a href="#home">home</a></li>
-    <li><a href="#about">about</a></li>
-    <li class="dropdown">
-      <a href="#portfolio">work</a>
-      <ul class="dropdown-menu">
-        <li><a href="#branding">rebrands/strategy</a></li>
-        <li><a href="#poster">posters</a></li>
-        <li><a href="#strategy">other</a></li>
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href=https://jennydangg.github.io/Portfolio-Home/>about</a></li>
+        <li class="dropdown">
+          <a href="#portfolio">work</a>
+          <ul class="dropdown-menu">
+            <li><a href="#branding">rebrands/strategy</a></li>
+            <li><a href="#poster">posters</a></li>
+            <li><a href="#strategy">other</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">contact</a></li>
       </ul>
-    </li>
-    <li><a href="#contact">contact</a></li>
-  </ul>
-</nav>
-     
+    </nav>
+
     <section id="home">
       <h1 class="typing">welcome to my portfolio.</h1>
     </section>
@@ -345,7 +355,7 @@
     <section id="portfolio">
       <div class="portfolio-wrapper">
         <h2>a glimpse of my work</h2>
-        
+
         <div class="work-grid">
           <div class="work-item">
             <img src="proj1.png" alt="Project 1">
@@ -362,39 +372,39 @@
         </div>
       </div>
     </section>
-    
-    <section id="photography">
-  <div class="photo-wrapper">
-    <h2>through my lens</h2>
-    <h3>
-      some photographs i've captured
-    </h3>
-    <div class="photo-grid">
-      <div class="photo-item">
-        <img src="meeko.jpg" alt="Photography 1">
-      </div>
-      <div class="photo-item">
-        <img src="Macro.jpg" alt="Photography 2">
-      </div>
-      <div class="photo-item">
-        <img src="meeko2.jpg" alt="Photography 3">
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="contact">
-  <div class="contact-bar">
-    <p>
-      let's connect:
-      <a href="mailto:jenny@example.com">jennydangg7@gmail.com</a>
-      <a href="https://www.linkedin.com/in/jenny-dang-0714042b6/" target="_blank" class="linkedin-icon">
-        <img src="linkedin-logo-linkedin-icon-transparent-free-png.webp
+    <section id="photography">
+      <div class="photo-wrapper">
+        <h2>through my lens</h2>
+        <h3>
+          some photographs i've captured
+        </h3>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <img src="meeko.jpg" alt="Photography 1">
+          </div>
+          <div class="photo-item">
+            <img src="Macro.jpg" alt="Photography 2">
+          </div>
+          <div class="photo-item">
+            <img src="meeko2.jpg" alt="Photography 3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-bar">
+        <p>
+          let's connect:
+          <a href="mailto:jenny@example.com">jennydangg7@gmail.com</a>
+          <a href="https://www.linkedin.com/in/jenny-dang-0714042b6/" target="_blank" class="linkedin-icon">
+            <img src="linkedin-logo-linkedin-icon-transparent-free-png.webp
 " alt="LinkedIn" />
-      </a>
-    </p>
-  </div>
-</section>
+          </a>
+        </p>
+      </div>
+    </section>
 
   </body>
 </html>
