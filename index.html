@@ -63,23 +63,35 @@
       }
       
 
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+}
+
 .typing {
   font-family: monospace;
+  font-size: 48px;
+  color: #d46e91;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #ff8ba7;
-  width: 0;
-  animation: typing 3s steps(20) forwards, blink .75s step-end infinite;
+  display: inline-block;
+  width: 24ch; /* FIXED WIDTH so it doesn't shift while typing */
+  animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 24ch } /* exactly fits "welcome to my portfolio." */
 }
 
 @keyframes blink {
   50% { border-color: transparent; }
 }
+
 
 
     </style>
@@ -94,9 +106,10 @@
       </ul>
     </nav>
      
-<section id="home" style="padding-top: 200px;">
-  <h1 class="typing" style="font-size: 48px; text-align: center; color: #d46e91;">welcome to my portfolio.</h1>
+<section id="home">
+  <h1 class="typing">welcome to my portfolio.</h1>
 </section>
+
 
   </body>
 </html>
