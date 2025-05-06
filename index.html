@@ -16,7 +16,6 @@
         font-family: Arial, sans-serif;
       }
 
-      /* Navigation Styles */
       nav {
         padding: 15px;
         position: sticky;
@@ -29,6 +28,7 @@
         list-style-type: none;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
       }
 
       nav ul li {
@@ -63,29 +63,38 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 20px;
+        text-align: center;
       }
 
-      .typing {
+      .typing-line {
         font-family: monospace;
-        font-size: 48px;
+        font-size: 6vw;
         color: #d46e91;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid #ff8ba7;
         display: inline-block;
-        width: 24ch;
-        animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
-        transform: translateY(-100px);
+        margin-bottom: 10px;
+        width: 0;
+      }
+
+      .first {
+        animation: typing 2s steps(20, end) forwards, blink .75s step-end infinite;
+      }
+
+      .second {
+        animation: typing2 2s steps(20, end) forwards 2.2s, blink .75s step-end infinite 2.2s;
       }
 
       @keyframes typing {
-        from {
-          width: 0
-        }
+        from { width: 0; }
+        to { width: 14ch; }
+      }
 
-        to {
-          width: 24ch
-        }
+      @keyframes typing2 {
+        from { width: 0; }
+        to { width: 10ch; }
       }
 
       @keyframes blink {
@@ -94,193 +103,6 @@
         }
       }
 
-      .scroll-down {
-        display: inline-block;
-        margin-top: 30px;
-        font-size: 32px;
-        text-decoration: none;
-        color: #d46e91;
-        animation: bounce 2s infinite;
-      }
-
-      @keyframes bounce {
-
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-
-        50% {
-          transform: translateY(10px);
-        }
-      }
-
-      #about {
-        padding: 100px 20px 50px;
-        background: white;
-        text-align: center;
-      }
-
-      .about-wrapper {
-        max-width: 700px;
-        margin: auto;
-      }
-
-      #about h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #d46e91;
-        margin-top: -30px;
-      }
-
-      #about p {
-        font-size: 18px;
-        line-height: 1.6;
-        color: #333;
-      }
-
-      .about-pic {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 50px;
-        margin-top: -30px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      }
-
-      .slider-container {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 10px;
-        scroll-behavior: smooth;
-      }
-
-      .work-slider {
-        display: inline-flex;
-        gap: 30px;
-        padding: 10px;
-      }
-
-      .work-item {
-        flex: 0 0 auto;
-        width: 300px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .work-item:hover {
-        transform: scale(1.05);
-      }
-
-      .work-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 12px 12px 0 0;
-      }
-
-      .work-item p {
-        padding: 10px;
-        font-size: 16px;
-        color: #444;
-      }
-
-      #portfolio h2 {
-        font-size: 36px;
-        color: #d46e91;
-        margin-bottom: 40px;
-        margin-top: -30px;
-        text-align: center;
-      }
-
-
-      #photography {
-        padding: 80px 20px;
-        text-align: center;
-      }
-
-      .photo-wrapper {
-        max-width: 1000px;
-        margin: auto;
-      }
-
-      #photography h2 {
-        font-size: 36px;
-        color: #d46e91;
-        margin-bottom: 40px;
-        margin-top: -100px;
-      }
-
-      #photography h3 {
-        font-size: 20px;
-        font-weight: normal;
-        color: #d46e91;
-        margin-top: -30px;
-        margin-bottom: 40px;
-      }
-
-      .photo-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-      }
-
-      .photo-item {
-        width: 300px;
-      }
-
-      .photo-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .photo-item img:hover {
-        transform: scale(1.05);
-      }
-
-      #contact {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .contact-bar {
-        background-color: #f7c3d5;
-        color: white;
-        text-align: left;
-        padding: 5px 10px;
-        font-size: 15px;
-        width: 100%;
-      }
-
-      .contact-bar a {
-        color: white;
-        text-decoration: underline;
-        font-weight: bold;
-        margin-left: 5px;
-      }
-
-      .linkedin-icon img {
-        width: 40px;
-        height: 40px;
-        vertical-align: middle;
-        margin-left: 8px;
-        transition: transform 0.3s ease;
-      }
-
-      .linkedin-icon img:hover {
-        transform: scale(1.1);
-      }
-
-      /* Dropdown menu setup */
       .dropdown {
         position: relative;
       }
@@ -315,47 +137,9 @@
         color: white;
       }
 
-      /* Show dropdown on hover */
       .dropdown:hover .dropdown-menu {
         display: block;
       }
-      
-      @media (max-width: 480px) {
- .typing {
-  font-family: monospace;
-  font-size: 48px;
-  color: #d46e91;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #ff8ba7;
-  display: inline-block;
-  width: 24ch;
-  max-width: 90vw; /* NEW */
-  animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
-  transform: translateY(-100px);
-}
-.typing-container {
-  width: 100%;
-  max-width: 90vw; /* fits better on mobile */
-  overflow: hidden;
-  border-right: 3px solid #ff8ba7;
-  white-space: nowrap;
-  font-size: 6vw; /* responsive text size */
-  font-family: monospace;
-  color: #d46e91;
-  animation: typing 3s steps(30, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-}
     </style>
   </head>
   <body>
@@ -376,9 +160,10 @@
     </nav>
 
     <section id="home">
-      <h1 class="typing">welcome to my portfolio.</h1>
+      <h1 class="typing-line first">welcome to my</h1>
+      <h1 class="typing-line second">portfolio.</h1>
     </section>
-
+    
     <section id="about">
       <div class="about-wrapper">
         <img src="me.jpg" alt="Photo of Jenny Dang" class="about-pic">
