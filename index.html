@@ -16,7 +16,6 @@
         font-family: Arial, sans-serif;
       }
 
-      /* Navigation Styles */
       nav {
         padding: 15px;
         position: sticky;
@@ -73,18 +72,17 @@
         overflow: hidden;
         border-right: 3px solid #ff8ba7;
         display: inline-block;
-        width: 24ch;
-        animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
+        width: 27ch;
+        animation: typing 3s steps(27) forwards, blink .75s step-end infinite;
         transform: translateY(-100px);
       }
 
       @keyframes typing {
         from {
-          width: 0
+          width: 0;
         }
-
         to {
-          width: 24ch
+          width: 27ch;
         }
       }
 
@@ -104,12 +102,9 @@
       }
 
       @keyframes bounce {
-
-        0%,
-        100% {
+        0%, 100% {
           transform: translateY(0);
         }
-
         50% {
           transform: translateY(10px);
         }
@@ -196,7 +191,6 @@
         text-align: center;
       }
 
-
       #photography {
         padding: 80px 20px;
         text-align: center;
@@ -280,7 +274,6 @@
         transform: scale(1.1);
       }
 
-      /* Dropdown menu setup */
       .dropdown {
         position: relative;
       }
@@ -315,46 +308,9 @@
         color: white;
       }
 
-      /* Show dropdown on hover */
       .dropdown:hover .dropdown-menu {
         display: block;
       }
-      
-      @media (max-width: 480px) {
- .typing {
-  font-family: monospace;
-  font-size: 48px;
-  color: #d46e91;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #ff8ba7;
-  display: inline-block;
-  width: 24ch;
-  max-width: 90vw; /* NEW */
-  animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
-  transform: translateY(-100px);
-}
-.typing-container {
-  width: 100%;
-  max-width: 90vw; /* fits better on mobile */
-  overflow: hidden;
-  border-right: 3px solid #ff8ba7;
-  white-space: nowrap;
-  font-size: 6vw; /* responsive text size */
-  font-family: monospace;
-  color: #d46e91;
-  animation: typing 3s steps(30, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-}
     </style>
   </head>
   <body>
