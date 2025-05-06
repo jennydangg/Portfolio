@@ -16,6 +16,7 @@
         font-family: Arial, sans-serif;
       }
 
+      /* Navigation Styles */
       nav {
         padding: 15px;
         position: sticky;
@@ -64,32 +65,33 @@
         align-items: center;
       }
 
-      .typing-container {
-        width: 100%;
-        padding: 0 20px;
-        text-align: center;
-        transform: translateY(-100px);
-      }
-
       .typing {
         font-family: monospace;
-        font-size: 6vw;
+        font-size: 48px;
         color: #d46e91;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid #ff8ba7;
         display: inline-block;
-        max-width: 100%;
-        animation: typing 3s steps(30, end) forwards, blink .75s step-end infinite;
+        width: 24ch;
+        animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
+        transform: translateY(-100px);
       }
 
       @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
+        from {
+          width: 0
+        }
+
+        to {
+          width: 24ch
+        }
       }
 
       @keyframes blink {
-        50% { border-color: transparent; }
+        50% {
+          border-color: transparent;
+        }
       }
 
       .scroll-down {
@@ -102,8 +104,15 @@
       }
 
       @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(10px); }
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(10px);
+        }
       }
 
       #about {
@@ -186,6 +195,7 @@
         margin-top: -30px;
         text-align: center;
       }
+
 
       #photography {
         padding: 80px 20px;
@@ -270,6 +280,7 @@
         transform: scale(1.1);
       }
 
+      /* Dropdown menu setup */
       .dropdown {
         position: relative;
       }
@@ -304,9 +315,46 @@
         color: white;
       }
 
+      /* Show dropdown on hover */
       .dropdown:hover .dropdown-menu {
         display: block;
       }
+      
+      @media (max-width: 480px) {
+ .typing {
+  font-family: monospace;
+  font-size: 48px;
+  color: #d46e91;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ff8ba7;
+  display: inline-block;
+  width: 24ch;
+  max-width: 90vw; /* NEW */
+  animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
+  transform: translateY(-100px);
+}
+.typing-container {
+  width: 100%;
+  max-width: 90vw; /* fits better on mobile */
+  overflow: hidden;
+  border-right: 3px solid #ff8ba7;
+  white-space: nowrap;
+  font-size: 6vw; /* responsive text size */
+  font-family: monospace;
+  color: #d46e91;
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+}
     </style>
   </head>
   <body>
@@ -327,12 +375,90 @@
     </nav>
 
     <section id="home">
-      <div class="typing-container">
-        <h1 class="typing">welcome to my portfolio.</h1>
+      <h1 class="typing">welcome to my portfolio.</h1>
+    </section>
+
+    <section id="about">
+      <div class="about-wrapper">
+        <img src="me.jpg" alt="Photo of Jenny Dang" class="about-pic">
+        <h2>who am i?</h2>
+        <p>
+          Hi! I’m Jenny, a digital designer passionate about storytelling, creativity,
+          and bringing ideas to life through design. Whether it's branding, UI/UX, or
+          digital illustration, I love blending strategy with beauty.
+        </p>
       </div>
     </section>
 
-    <!-- Other sections stay the same... -->
+    <section id="portfolio">
+      <div class="portfolio-wrapper">
+        <h2>a glimpse of my work</h2>
+
+        <div class="slider-container">
+          <div class="work-slider">
+            <div class="work-item">
+              <img src="proj1.png" alt="Project 1">
+              <p>WYAWYG?</p>
+            </div>
+            <div class="work-item">
+              <img src="proj3.png" alt="Project 2">
+              <p>Music Poster</p>
+            </div>
+            <div class="work-item">
+              <img src="rogers.png" alt="Project 3">
+              <p>Rogers Brand Strategy</p>
+            </div>
+            <div class="work-item">
+              <img src="Screenshot 2025-04-16 at 7.05.57 PM.png" alt="Project 4">
+              <p>Wet n Wild rebrand</p>
+            </div>
+            <div class="work-item">
+              <img src="animal app.png" alt="Project 5">
+              <p>MoodBloom app</p>
+            </div>
+            <div class="work-item">
+              <img src="ari web.png" alt="Project 6">
+              <p>Ariana Grande website redesign</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="photography">
+      <div class="photo-wrapper">
+        <h2>through my lens</h2>
+        <h3>
+          some photographs i've captured
+        </h3>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <img src="meeko.jpg" alt="Photography 1">
+          </div>
+          <div class="photo-item">
+            <img src="Macro.jpg" alt="Photography 2">
+          </div>
+          <div class="photo-item">
+            <img src="meeko2.jpg" alt="Photography 3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-bar">
+        <p>
+          let's connect:
+          <a href="mailto:jenny@example.com">jennydangg7@gmail.com</a>
+          <a href="https://www.linkedin.com/in/jenny-dang-0714042b6/" target="_blank" class="linkedin-icon">
+            <img src="linkedin-logo-linkedin-icon-transparent-free-png.webp
+" alt="LinkedIn" />
+          </a>
+        </p>
+      </div>
+    </section>
 
   </body>
 </html>
