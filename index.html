@@ -66,27 +66,33 @@
       }
 
       .typing {
-  font-family: monospace;
-  font-size: 6vw; /* responsive size */
-  color: #d46e91;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #ff8ba7;
-  display: inline-block;
-  width: 0;
-  max-width: 90vw; /* prevent overflow */
-  animation: typing 4s steps(30, end) forwards, blink .75s step-end infinite;
-  transform: translateY(-100px);
-}
+        font-family: monospace;
+        font-size: 48px;
+        color: #d46e91;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid #ff8ba7;
+        display: inline-block;
+        width: 24ch;
+        animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
+        transform: translateY(-100px);
+      }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 90vw; }
-}
+      @keyframes typing {
+        from {
+          width: 0
+        }
 
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+        to {
+          width: 24ch
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
 
       .scroll-down {
         display: inline-block;
@@ -313,6 +319,7 @@
       .dropdown:hover .dropdown-menu {
         display: block;
       }
+      
       @media (max-width: 480px) {
  .typing {
   font-family: monospace;
@@ -322,6 +329,7 @@
   overflow: hidden;
   border-right: 3px solid #ff8ba7;
   display: inline-block;
+  width: 24ch;
   max-width: 90vw; /* NEW */
   animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
   transform: translateY(-100px);
