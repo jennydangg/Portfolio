@@ -319,6 +319,23 @@
       .dropdown:hover .dropdown-menu {
         display: block;
       }
+      
+      @media (max-width: 480px) {
+ .typing {
+  font-family: monospace;
+  font-size: 48px;
+  color: #d46e91;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ff8ba7;
+  display: inline-block;
+  width: 24ch;
+  max-width: 90vw; /* NEW */
+  animation: typing 3s steps(24) forwards, blink .75s step-end infinite;
+  transform: translateY(-100px);
+}
+  }
+}
     </style>
   </head>
   <body>
